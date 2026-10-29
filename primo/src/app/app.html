@@ -1,0 +1,22 @@
+<div style="background-color: orange;">
+  <p>Sono un paragrafo dento un tag div</p>
+</div>
+
+<div style="background-color: burlywood;">
+  La città di nascita è: {{citta}} - primo binding: Interpolation
+</div>
+
+<div style="background-color: aquamarine;">
+  avendo anni: {{anni}} risulti essere: {{anni >= 18 ?"Maggiorenne":"Minorenne"}}
+</div>
+
+<div style="background-color: chartreuse;height: 40px;">
+  <button (click)="cambiaCitta()">Cambia la città di nascita in Salerno - event binding</button>
+</div>
+<div style="background-color: cyan;height: 40px;">
+  <button>Cambia la città di nascita in un valore digitato - binding two way</button> <br>
+  <label for="city">Digita la tua città di nascita</label>
+  <input id="city" type="text" [(ngModel)]="citta"> <label for="">binding two way - banana in the box</label> <br>
+  <label for="age">Digita i tuoi anni</label>
+  <input id="age" type="number" [(ngModel)]="anni"> <label for="">binding two way - banana in the box</label>
+</div>
