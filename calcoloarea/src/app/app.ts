@@ -20,7 +20,7 @@ export class App {
   Divisore: string = "Seleziona figura"
 
 
-  risultato: string = "Valore iniziale"
+  risultato: string = ""
 
   calcolo(): void {
 

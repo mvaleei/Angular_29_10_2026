@@ -21,14 +21,26 @@
     </td>
   </tr>
   <tr>
-
     <td colspan="2">
       <button (click)="calcolo()">Calcolo area</button>
     </td>
+
   </tr>
+
+  @if (risultato.length>0) {
   <tr>
     <td colspan="2">
       <label for="">{{risultato}}</label>
     </td>
   </tr>
+  }
+  @else {
+  <tr>
+    <td colspan="2">
+      <label for="">Attenzione, inserire i dati per il calcolo</label>
+    </td>
+  </tr>
+  }
+
+
 </table>
