@@ -1,0 +1,34 @@
+<table border="1">
+  <tr>
+    <td><label for="">Altezza</label></td>
+    <td>
+      <input type="number" [(ngModel)]="AltezzaFigura"> <span>{{AltezzaFigura}}</span>
+    </td>
+  </tr>
+  <tr>
+    <td><label for="">Base</label></td>
+    <td>
+      <input type="number" [(ngModel)]="BaseFigura"> <span>{{BaseFigura}}</span>
+    </td>
+  </tr>
+  <tr>
+    <td><label for="">Figura</label></td>
+    <td>
+      <select [(ngModel)]="Divisore">
+        <option value="Rettangolo:1">Rettangolo</option>
+        <option value="Triangolo:2">Triangolo</option>
+      </select> <span>{{Divisore}}</span>
+    </td>
+  </tr>
+  <tr>
+
+    <td colspan="2">
+      <button (click)="calcolo()">Calcolo area</button>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <label for="">{{risultato}}</label>
+    </td>
+  </tr>
+</table>
