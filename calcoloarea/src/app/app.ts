@@ -12,6 +12,10 @@ import { FormsModule } from '@angular/forms'
 export class App {
   protected readonly title = signal('calcoloarea');
 
+  figure: Array<string> = [
+    "Rettangolo:1", "Triangolo:2"
+  ]
+
 
   AltezzaFigura: number = 0
 
@@ -38,5 +42,20 @@ export class App {
 
   }
 
+
+  //gestione degli array  
+
+  citta: Array<string> = ["Como", "Bologna", "Pescara", "Napoli", "Palermo"]
+
+  aggiungiCitta(): void {
+    this.citta.push("Viterbo")
+  }
+
+
+  nuovaCitta: string = ""
+
+  addDynamic(): void {
+    this.citta.push(this.nuovaCitta);
+  }
 
 }

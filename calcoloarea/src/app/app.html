@@ -15,8 +15,9 @@
     <td><label for="">Figura</label></td>
     <td>
       <select [(ngModel)]="Divisore">
-        <option value="Rettangolo:1">Rettangolo</option>
-        <option value="Triangolo:2">Triangolo</option>
+        @for (singolaFigura of figure; track $index) {
+        <option value="{{singolaFigura}}">{{singolaFigura.split(":")[0]}}</option>
+        }
       </select> <span>{{Divisore}}</span>
     </td>
   </tr>
@@ -24,7 +25,6 @@
     <td colspan="2">
       <button (click)="calcolo()">Calcolo area</button>
     </td>
-
   </tr>
 
   @if (risultato.length>0) {
@@ -44,3 +44,20 @@
 
 
 </table>
+
+<div style="background-color: aquamarine">
+  <label for="">Gestione degli array</label>
+  <button (click)="aggiungiCitta()">Inserisci una nuova citta</button>
+  <br>
+  <label for="">Inserisci ua nuova citta</label>
+  <input type="text" [(ngModel)]="nuovaCitta">
+  <button (click)="addDynamic()">Add city</button>
+  <div>Nella lista delle città sono presenti: {{citta.length}}</div>
+  <ol>
+    @for (nomeCitta of citta; track $index) {
+    <li>
+      <label for="">{{nomeCitta}}</label>
+    </li>
+    }
+  </ol>
+</div>
