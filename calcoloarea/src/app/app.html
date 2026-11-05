@@ -61,3 +61,37 @@
     }
   </ol>
 </div>
+
+<div style="background-color: bisque;">
+  <label for="">Gestione delle fatture</label>
+  <div>Numero di fatture presenti in archivio: {{contabilita.length}}</div>
+
+
+  <ul>
+    @for (fattura of contabilita; track fattura.numero) {
+    <li>{{fattura.numero}} - {{fattura.cliente}} - {{fattura.descrizione}} - {{fattura.importo}} - {{fattura.numero}}
+    </li>
+    }
+  </ul>
+
+
+  <table border="2">
+    @for (itemFattura of contabilita; track itemFattura.numero) {
+    <tr>
+      <td><label for="">{{itemFattura.numero}}</label></td>
+      <td><label for="">{{itemFattura.cliente}}</label></td>
+      <td><label for="">{{itemFattura.descrizione}}</label></td>
+      <td><label for="">{{itemFattura.importo}}</label></td>
+      <td><label for="">{{itemFattura.importo | currency:'€'}}</label></td>
+      <td><label for="">{{itemFattura.cliente | cambiaLetteraM:"M"}}</label></td>
+      <td><label for="">{{itemFattura.fatturabile ? "SI": "NO"}}</label></td>
+      <td><label for="">{{itemFattura.importo | Iva:itemFattura.fatturabile | currency:"$"}}</label></td>
+      <td><label for="">{{itemFattura.descrizione | lowercase}}</label></td>
+
+
+    </tr>
+    }
+  </table>
+
+
+</div>

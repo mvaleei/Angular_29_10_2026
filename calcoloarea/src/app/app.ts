@@ -3,9 +3,25 @@ import { Component, signal } from '@angular/core';
 
 import { FormsModule } from '@angular/forms'
 
+import { IFattura } from './Interfacce/IFattura';
+
+
+//gestione pipe
+import { TrasformareLetteraM } from '../Shared/CambiaLettera';
+
+import { CalcoloIva } from '../Shared/ApplicaIva';
+
+import { LowerCasePipe, CurrencyPipe } from '@angular/common';
+
 @Component({
   selector: 'app-root',
-  imports: [FormsModule],
+  imports: [
+    FormsModule,
+    TrasformareLetteraM,
+    CalcoloIva,
+    LowerCasePipe,
+    CurrencyPipe
+  ],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
@@ -57,5 +73,30 @@ export class App {
   addDynamic(): void {
     this.citta.push(this.nuovaCitta);
   }
+
+
+  contabilita: Array<IFattura> = [
+    {
+      numero: 1,
+      descrizione: "Monitor 15''",
+      cliente: "Mario Rossi",
+      importo: 600,
+      fatturabile: true
+    },
+    {
+      numero: 2,
+      descrizione: "Processore I9",
+      cliente: "Giovanni Bianchi",
+      importo: 758,
+      fatturabile: false
+    },
+    {
+      numero: 3,
+      descrizione: "PC Completo",
+      cliente: "Moreno Gialli",
+      importo: 2400,
+      fatturabile: true
+    },
+  ]
 
 }
