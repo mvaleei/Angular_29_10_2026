@@ -3,6 +3,7 @@
     <h2>Numero delle fatture presenti: {{contabilita.length}}</h2>
 
     <table border="1">
+
         @for (singola of contabilita; track singola.numero) {
         <tr>
             <app-dettaglio [dettaglioFattura]="singola"></app-dettaglio>

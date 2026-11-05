@@ -1,11 +1,10 @@
 <div>
     <td>{{dettaglioFattura.numero}}</td>
     <td>
-        <button (click)="visualizza()">Visualizza</button>
+        <button (click)="visualizza()">{{visibile ? "Nascondi" : "Visualizza"}}</button>
     </td>
-
     @if(visibile){
-    <td>{{dettaglioFattura.cliente}}</td>
+    <td>{{dettaglioFattura.cliente | uppercase}}</td>
     <td>{{dettaglioFattura.descrizione}}</td>
     <td>{{dettaglioFattura.importo}}</td>
     <td>{{dettaglioFattura.fatturabile}}</td>

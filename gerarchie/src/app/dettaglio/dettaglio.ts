@@ -2,9 +2,11 @@
 import { Component, Input } from '@angular/core';
 import { IFattura } from '../Interfacce/IFattura';
 
+import { UpperCasePipe } from '@angular/common';
+
 @Component({
   selector: 'app-dettaglio',
-  imports: [],
+  imports: [UpperCasePipe],
   templateUrl: './dettaglio.html',
   styleUrl: './dettaglio.css',
 })
