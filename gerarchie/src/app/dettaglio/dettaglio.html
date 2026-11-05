@@ -1,0 +1,13 @@
+<div>
+    <td>{{dettaglioFattura.numero}}</td>
+    <td>
+        <button (click)="visualizza()">Visualizza</button>
+    </td>
+
+    @if(visibile){
+    <td>{{dettaglioFattura.cliente}}</td>
+    <td>{{dettaglioFattura.descrizione}}</td>
+    <td>{{dettaglioFattura.importo}}</td>
+    <td>{{dettaglioFattura.fatturabile}}</td>
+    }
+</div>
