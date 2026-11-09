@@ -1,6 +1,11 @@
 <div style="background-color: blueviolet;height: 400px; padding-left: 50px;padding-top: 25px;">
 
     <h2>
-        <span style="background-color: red;">Saldo carta:</span>
+        <span style="background-color: red;">Saldo carta: {{saldo | currency:"€"}}</span>
     </h2>
+    <app-operazione (inviaNuovoSaldo)="riceviNuovoSaldoDalFiglio($event)" [tipoUtente]="1"
+        [importoRicevuto]="saldo"></app-operazione>
+    <br>
+    <app-operazione [tipoUtente]="0" (inviaNuovoSaldo)="riceviNuovoSaldoDalFiglio($event)"
+        [importoRicevuto]="saldo"></app-operazione>
 </div>

@@ -1,0 +1,10 @@
+<div style="color: white;">
+    <label for="">Importo da {{tipoUtente === 0 ? "versare" : "prelevare"}}</label>
+    <input type="number" [(ngModel)]="importo"> <span>{{importo}}</span>
+    <button (click)="calcolo()">Conferma {{tipoUtente === 0 ? "versamento" : "prelevamento"}} </button>
+    @if (tipoUtente ===1) {
+    <label for="">Saldo Attuale: {{importoRicevuto}}</label>
+    }
+
+
+</div>
