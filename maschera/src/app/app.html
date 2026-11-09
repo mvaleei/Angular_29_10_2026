@@ -1,0 +1,42 @@
+<div style="background-color: chocolate; height: 600px;">
+  <h2>Componente per la gestione delle form di convalida</h2>
+
+
+
+
+  <div style="background-color: aqua; width: 80%;margin-left: 10%;">
+
+    <form [formGroup]="contactForm" (submit)="registra()" (reset)="resetta()">
+      <div>
+        <label for="">Nome</label>
+        <input type="text" formControlName="nome">
+        @if (contactForm.controls['nome'].invalid) {
+        <label style="background-color: red;" for="">Errore: Massimo 20 caratteri e minimo 5 - OBBLIGATORIO </label>
+
+        }
+      </div>
+      <div>
+        <label for="">Cognome</label>
+        <input type="text" formControlName="cognome">
+        @if (contactForm.controls['cognome'].invalid) {
+        <label style="background-color: red;" for="">Errore: Minimo 3 caratteri</label>
+        }
+
+      </div>
+      <div>
+        <label for="">Anni</label>
+        <input type="number" formControlName="anni">
+        @if (contactForm.controls['anni'].invalid) {
+        <label style="background-color: red;" for="">Errore: DEVI ESSERE MAGGIORENNE</label>
+        }
+
+      </div>
+      <div>
+        <button [disabled]="contactForm.invalid" type="submit">Conferma dati per invio al servizio</button>
+        <button type="reset">Resetta</button>
+      </div>
+    </form>
+  </div>
+
+
+</div>
