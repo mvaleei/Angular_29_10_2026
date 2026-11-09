@@ -12,4 +12,15 @@ export class Father {
 
   nomeRicevuto: string = "Nome da ricevere"
 
+  riceviNomeDalFiglio(nomeDaRicevere: string): void {
+    this.nomeRicevuto = nomeDaRicevere;
+  }
+
+
+  anniRicevuti: number = 555
+
+  riceviAnniDalFiglio(anniRicevutiDalFiglio: number): void {
+    this.anniRicevuti = anniRicevutiDalFiglio;
+  }
+
 }

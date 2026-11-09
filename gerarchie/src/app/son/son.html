@@ -2,4 +2,14 @@
     <h4>Sono il componente figlio che invia dati al padre</h4>
     <label for="">Inserisci il tuo nome</label>
     <input type="text" [(ngModel)]="nomeDigitato"> <span>{{nomeDigitato}}</span>
+    <button (click)="inviaNomeAlPadre()">Invia dati al padre</button> <br>
+
+    <label for="">Inserisci i tuoi anni</label>
+    <input type="number" [(ngModel)]="anniDigitati"> <span>{{anniDigitati}}</span>
+    <button (click)="inviaAnniAlPadre()">Invia gli anni al padre</button>
+
+    <br><br>
+
+    <button (click)="sendAll()">Invia tutti i dati al padre</button>
+
 </div>

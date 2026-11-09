@@ -1,9 +1,16 @@
 <div style="background-color: aqua; width: 80%;">
     <h3>Componente padre che RICEVE info dal figlio</h3>
 
-    <app-son></app-son>
+    <app-son 
+        (eventoFiglio)="riceviNomeDalFiglio($event)"  
+        (eventoAnni)="riceviAnniDalFiglio($event)"
+    >
+    </app-son>
 
     <div>Dal componente figlio ho ricevuto il seguente nome: {{nomeRicevuto}}</div>
+    <br>
+
+    <div>Anni ricevuti dal componente son: {{anniRicevuti}}</div>
 
 
 </div>
