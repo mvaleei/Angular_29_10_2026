@@ -4,7 +4,8 @@ import {
 } from "@angular/core";
 
 import {
-    HttpClient      //modulo per effettaure la vera chiamata
+    HttpClient,     //modulo per effettaure la vera chiamata
+    HttpHeaders     //per inviare dei dati (opzionali)
 } from "@angular/common/http";
 
 import {
@@ -14,7 +15,6 @@ import {
 import {
     Observable      //oggetto per gestire dati di tipo asincrono
 } from "rxjs";
-
 
 @Injectable(
     {
@@ -34,6 +34,20 @@ export class UtentiServizio {
     getUtenti(): Observable<Array<IUtente>> {
         return this.httpOggetto.get<Array<IUtente>>(this.url);
 
+    }
+
+
+    //creo l'oggetto da inviare nella fase di post
+    httpOptions = {
+        header: new HttpHeaders(
+            {
+                'content-type': 'application/json'
+            }
+        )
+    }
+
+    aggiungiUtente(nuovo: IUtente): any {
+        return this.httpOggetto.post(this.url, nuovo)
     }
 
 

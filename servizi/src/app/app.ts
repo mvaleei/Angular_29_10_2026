@@ -31,7 +31,21 @@ export class App {
       }
     )
 
+  }
 
+  addUtente(): void {
+    let nuovoUtente: IUtente = {
+      id: 999,
+      name: "Pippo",
+      username: "Minni",
+      email: "pippo@minni.it"
+    }
+    this._Utenti.aggiungiUtente(nuovoUtente).subscribe(
+      {
+        next: (nuovo: any) => { console.log(nuovo) },
+        error: (errore: any) => { console.log(errore) }
+      }
+    )
   }
 
 }
