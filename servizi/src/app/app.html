@@ -1,0 +1,16 @@
+<div>
+  <h1>Componente per la gestione dei servizi</h1>
+
+  <button (click)="ricezione()">Chiama servizio per ricevere tutti gli utenti</button>
+
+  <h3>Numero di utenti letti dal servizio: {{listaUtenti().length}}</h3>
+
+  @for (user of listaUtenti(); track $index) {
+
+  <div>Nome Utente: {{user.name}} - id: {{user.id}} - email: {{user.email}} - username: {{user.username}}</div>
+
+
+  }
+
+
+</div>
