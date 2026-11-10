@@ -1,3 +1,12 @@
 <div style="background-color: green; width: 80%; height: 600px;">
     <h3>Sono il componente per la gestione dei fornitori</h3>
+
+    <h4 style="color: white;">Nome del fornitore ricevuto mediante querystring: {{nomeFornitore}}</h4>
+    <h4 style="color: white;">Fatturato del fornitore ricevuto mediante querystring: {{fatturato}}</h4>
+    <label for="">Selezikona la sede</label>
+    <select name="" id="">
+        @for (item of sedi; track $index) {
+        <option value="item">{{item}}</option>
+        }
+    </select>
 </div>

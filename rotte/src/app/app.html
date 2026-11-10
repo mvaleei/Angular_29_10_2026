@@ -1,13 +1,14 @@
 <h1>Sono il componente master dell'applicazione</h1>
 
 
-
 <ul>
   <li>
-    <a routerLink="/clienti">Clienti</a>
+    <a routerLink="/clienti/{{idScelto}}">Clienti</a> <input type="number" [(ngModel)]="idScelto">
+    <span>{{idScelto}}</span>
   </li>
   <li>
-    <a routerLink="/fornitori">Fornitori</a>
+    <a routerLink="/fornitori"
+      [queryParams]="{nome:'Barbara Baletti', fatturato:560000, sedi:['Napoli','Como','Palermo']}">Fornitori</a>
   </li>
   <li>
     <a routerLink="/magazzino">Magazzino</a>

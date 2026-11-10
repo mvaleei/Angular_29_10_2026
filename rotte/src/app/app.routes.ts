@@ -12,13 +12,13 @@ export const routes: Routes = [   //oggetto che gestisce e detta TUTTE le regole
 
     //le regole di routing
     {
-        path: 'clienti',  //path da intercettare
+        path: 'clienti/:idcliente',   //:nomecliente/:indirizzo',  //path da intercettare
         component: Clienti
     },
-    {
-        path: 'prova',  //path da intercettare
-        component: Clienti
-    },
+    /* {
+         path: 'prova',  //path da intercettare
+         component: Clienti
+     },*/
     {
         path: 'fornitori',
         component: Fornitori
