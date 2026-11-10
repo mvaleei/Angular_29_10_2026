@@ -1,0 +1,11 @@
+<div style="background-color: cornflowerblue; width: 80%;">
+
+    <h3>Pagina della lista delle fatture in contabilità</h3>
+    <h4>Numero di fatture presente in archivio: {{listaFatture.length}}</h4>
+    @for (singola of listaFatture; track $index) {
+    <div>
+        {{singola}}
+    </div>
+    }
+
+</div>

@@ -1,0 +1,35 @@
+<h1>Sono il componente master dell'applicazione</h1>
+
+
+
+<ul>
+  <li>
+    <a routerLink="/clienti">Clienti</a>
+  </li>
+  <li>
+    <a routerLink="/fornitori">Fornitori</a>
+  </li>
+  <li>
+    <a routerLink="/magazzino">Magazzino</a>
+  </li>
+  <li>
+    <a routerLink="/fatture">Fatture</a>
+  </li>
+  <li>
+    <a routerLink="/prova">Clienti</a>
+  </li>
+</ul>
+
+
+<br>
+
+<div>Dopo questa posizione verranno innestati tutti i componenti richiamati mediante le regole di routing</div>
+
+<div style="background-color: beige; float: left; width:70%">
+  <router-outlet></router-outlet>
+</div>
+
+<div style="background-color: red; float: right; width:30%">
+  <button>Cliccami</button> <br>
+  <button>Cliccami</button>
+</div>
